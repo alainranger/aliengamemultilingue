@@ -881,25 +881,25 @@ namespace AlienGameSample
         {
             if (gameOver)
             {
-                Vector2 size = menuFont.MeasureString("GAME OVER");
-                DrawString(menuFont, "GAME OVER", new Vector2(ScreenManager.Game.GraphicsDevice.Viewport.Width / 2 - size.X / 2, ScreenManager.Game.GraphicsDevice.Viewport.Height / 2 - size.Y / 2), new Color(255,64,64));
+                Vector2 size = menuFont.MeasureString(AlienGameSample.Properties.Resources.strGAMEOVER);
+                DrawString(menuFont, AlienGameSample.Properties.Resources.strGAMEOVER, new Vector2(ScreenManager.Game.GraphicsDevice.Viewport.Width / 2 - size.X / 2, ScreenManager.Game.GraphicsDevice.Viewport.Height / 2 - size.Y / 2), new Color(255, 64, 64));
             }
             else
             {
                 int bonus = 100 * (hitStreak / 5);
                 string bonusString = (bonus > 0 ? " (" + bonus.ToString(System.Globalization.CultureInfo.CurrentCulture) + "%)" : "");
                 // Score
-                DrawString(scoreFont, "SCORE: " + player.Score.ToString(System.Globalization.CultureInfo.CurrentCulture) + bonusString, new Vector2(6, 4), Color.Yellow);
+                DrawString(scoreFont, AlienGameSample.Properties.Resources.strSCORE  + player.Score.ToString(System.Globalization.CultureInfo.CurrentCulture) + bonusString, new Vector2(6, 4), Color.Yellow);
 
-                string text = "LIVES: " + player.Lives.ToString(System.Globalization.CultureInfo.CurrentCulture);
+                string text = AlienGameSample.Properties.Resources.strLIVES + player.Lives.ToString(System.Globalization.CultureInfo.CurrentCulture);
                 Vector2 size = scoreFont.MeasureString(text);
 
                 // Lives
                 DrawString(scoreFont, text, new Vector2(234 - (int)size.X, 4), Color.Yellow);
 
-                DrawString(scoreFont, "LEVEL: " + (((baseLevelKillCount - 5) / 5) + 1).ToString(System.Globalization.CultureInfo.CurrentCulture), new Vector2(6, 300), Color.Yellow);
+                DrawString(scoreFont, AlienGameSample.Properties.Resources.strLEVEL + (((baseLevelKillCount - 5) / 5) + 1).ToString(System.Globalization.CultureInfo.CurrentCulture), new Vector2(6, 300), Color.Yellow);
 
-                text = "HIGH SCORE: " + highScore.ToString(System.Globalization.CultureInfo.CurrentCulture);
+                text = AlienGameSample.Properties.Resources.strHIGHSCORE + highScore.ToString(System.Globalization.CultureInfo.CurrentCulture);
 
                 size = scoreFont.MeasureString(text);
 
