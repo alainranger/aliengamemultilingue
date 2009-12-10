@@ -21,8 +21,9 @@ namespace AlienGameSample
             : base("Main")
         {
             // Create our menu entries.
-            MenuEntry startGameMenuEntry = new MenuEntry("START GAME");
-            MenuEntry exitMenuEntry = new MenuEntry("QUIT");
+
+            MenuEntry startGameMenuEntry = new MenuEntry(AlienGameSample.Properties.Resources.MenuEntry_StartGame);
+            MenuEntry exitMenuEntry = new MenuEntry(AlienGameSample.Properties.Resources.MenuEntry_Quit);
 
             // Hook up menu event handlers.
             startGameMenuEntry.Selected += StartGameMenuEntrySelected;
